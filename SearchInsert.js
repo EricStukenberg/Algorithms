@@ -4,7 +4,20 @@
  * @return {number}
  */
 var searchInsert = function(nums, target) {
+    let i = 0;
+    const len = nums.length
+   for(i; i < len; i++) {
+
+       if(nums[i] === target) {
+           console.log(nums[i])
+           return i;
+       } else if(nums[i] > target) {
+            return i;
+           
+        }
+   } 
     
+    return i;
 };
 
 describe("searchInsert", () => {
