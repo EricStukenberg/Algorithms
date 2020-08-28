@@ -37,3 +37,8 @@ function checkSubString(p, s) {
     }
     return true;
 }
+
+
+function regexVersion(s, p) {
+    return (new RegExp('^'+p+'$')).test(s);
+}
