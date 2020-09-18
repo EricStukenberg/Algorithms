@@ -10,10 +10,10 @@ var fourSum = function(nums, target) {
     const kSum = (nums, target, start, k) => {
         const res = {}
         if(start === nums.length || nums[start]*k > target ||  target > nums[nums.length - 1] * k) {
-            
+            return res;
         } 
         if( k === 2) {
-            
+            return twoSum(nums, target, start);
             
         }
         for(i = start; i < nums.length; i++) {
