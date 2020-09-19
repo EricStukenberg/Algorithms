@@ -4,35 +4,32 @@
  * @return {number[][]}
  */
 var fourSum = function(nums, target) {
-    nums.sort();
-    let res = [];
+    nums.sort((a, b) => a - b);
+    const result =0 []
     
-    const kSum = (nums, target, start, k) => {
-        const res = {}
-        if(start === nums.length || nums[start]*k > target ||  target > nums[nums.length - 1] * k) {
-            return res;
-        } 
-        if( k === 2) {
-            return twoSum(nums, target, start);
-            
-        }
-        for(i = start; i < nums.length; i++) {
-            if(i === start || nums[i -1] != nums[i]) {
-            
-                
-            }
-        }
-        
+    for(let i = 0; i < nums.length - 3; i++) {
+        for(let j = i + 1; j < nums.length - 2; j++) {
+            let low = j + 1;
+            let high = nums.length - 1
+
+            while(low < high) {
+                const sum = nums[i] + nums[j] + nums[low] + nums[high];
+                if(sum === target) {
+                    result.push([nums[i], nums[j], nums[low], nums[high]])
+                    while(nums[low] === nums[low + 1]) low++;
+                    while(nums[high] === nums[high - 1]) high--;
+                    low++;
+                    high--;
+                } else if(sum < target) {
+                    low++
+                } else {
+                    high--
+                }
+            }   
+            while(nums[j] === nums[j + 1]) j++;
+        }   
+        while(nums[i] === nums[i + 1]) i++;
     }
-    
-    const twoSum = (nums, target) => {
-        const res = {}
-        for (let i = 0; i < nums.length; i++){
-            const diff = target - nums[i];
-            if(res[diff] !== undefined && res[diff] !== i)  return [i, res[diff]]
-            res[nums[i]] = i
-        }
-        return res;
-    }
+    return result
 };
 
