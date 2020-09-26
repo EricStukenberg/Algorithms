@@ -4,7 +4,6 @@ var runningSum = function(nums) {
     for(let i = 0; i < nums.length; i++) {
         sum += nums[i]
         res.push(sum)
-        
-        
     }
+    return res
 };
