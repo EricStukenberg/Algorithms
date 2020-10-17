@@ -4,7 +4,7 @@ const kidsWithCandies = function(candies, extraCandies) {
     const len = candies.length
     const res = []
     for(let i = 0; i < len; i++) {
-        if(candie[i] < min) {
+        if(candies[i] < min) {
             
         } else {
             
