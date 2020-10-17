@@ -5,9 +5,9 @@ const kidsWithCandies = function(candies, extraCandies) {
     const res = []
     for(let i = 0; i < len; i++) {
         if(candies[i] < min) {
-            res << false
+            res.push(false)
         } else {
-            res << true
+            res.push(true)
         }
     }
     return res;
