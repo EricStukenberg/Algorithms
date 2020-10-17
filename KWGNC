@@ -1,3 +1,6 @@
 const kidsWithCandies = function(candies, extraCandies) {
     const max = Math.max(...candies)
+    const min = max - extraCandies
+    const len = candies.length
+    const res = []
 };
