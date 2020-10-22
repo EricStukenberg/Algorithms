@@ -14,3 +14,12 @@ letterCombinations = (digits) => {
     let firstSetLen = digitSet[0].length
     temp = ''
 };
+
+
+const getDigitSet = (digits, lenDigit) => {
+        let res = []
+        for(let i = 0; i < lenDigit; i++) {
+            res.push(letterMap.get(digits.charAt(i)))
+        }
+    return res;
+}
