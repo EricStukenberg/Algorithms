@@ -9,5 +9,8 @@ letterCombinations = (digits) => {
             return []
         }
     }
-    
+    let res = []
+    let digitSet = getDigitSet(digits, lenDigit)
+    let firstSetLen = digitSet[0].length
+    temp = ''
 };
