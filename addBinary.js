@@ -8,6 +8,12 @@ addBinary = (a, b) => {
             aNum += Math.pow(2, i)
         }
     }
+        
+    for(let i = 0; i < b.length; i++) {
+        if(a.charAt(i) == 1) {
+            aNum += Math.pow(2, i)
+        }
+    }
     
     
 };
