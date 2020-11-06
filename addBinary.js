@@ -3,13 +3,13 @@ addBinary = (a, b) => {
     let aNum = 0
     let bNum = 0
     //get a 
-    for(let i = 0; i < a.length; i++) {
+    for(let i = a.length-1; i >= 0; i--) {
         if(a.charAt(i) == 1) {
             aNum += Math.pow(2, i)
         }
     }
         
-    for(let i = 0; i < b.length; i++) {
+    for(let i = a.length-1; i >= 0; i--) {
         if(a.charAt(i) == 1) {
             aNum += Math.pow(2, i)
         }
