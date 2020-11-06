@@ -1,20 +1,31 @@
 
 addBinary = (a, b) => {
-    let aNum = 0
-    let bNum = 0
+    let aNum = BigInt(0)
+    let bNum = BigInt(0)
+    let pow = 0
     //get a 
     for(let i = a.length-1; i >= 0; i--) {
-        if(a.charAt(i) == 1) {
-            aNum += Math.pow(2, i)
+        if(a.charAt(i) == '1') {
+            console.log("i = " + i + " cahr at = "  + a.charAt(i))
+
+            let temp = Math.pow(2, pow)
+            aNum +=  BigInt(temp)
         }
+        pow++
+
     }
-        
-    for(let i = a.length-1; i >= 0; i--) {
-        if(a.charAt(i) == 1) {
-            aNum += Math.pow(2, i)
+    pow = 0
+    for(let i = b.length-1; i >= 0; i--) {
+
+        if(b.charAt(i) == '1') {
+            let temp = Math.pow(2, pow)
+            bNum +=  BigInt(temp)
+
         }
+        pow++
+
     }
-    
-     return (aNum + bNum).toString(2);
+
+    return BigInt(aNum + bNum).toString(2);
 
 };
