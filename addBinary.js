@@ -15,5 +15,6 @@ addBinary = (a, b) => {
         }
     }
     
-    
+     return (aNum + bNum).toString(2);
+
 };
