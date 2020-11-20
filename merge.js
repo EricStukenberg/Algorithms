@@ -22,4 +22,10 @@ const merge = (nums1, m, nums2, n) => {
         k++
         i++
     }
+    
+    while( i < m) {
+        res[k] = nums2[j]
+        k++
+        j++
+    }
 };
