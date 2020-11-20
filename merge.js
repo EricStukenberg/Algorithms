@@ -16,4 +16,10 @@ const merge = (nums1, m, nums2, n) => {
             j++
         }
     }
+    
+     while( i < m) {
+        res[k] = num1[i]
+        k++
+        i++
+    }
 };
