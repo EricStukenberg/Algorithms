@@ -28,4 +28,5 @@ const merge = (nums1, m, nums2, n) => {
         k++
         j++
     }
+    return res
 };
