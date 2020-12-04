@@ -12,7 +12,14 @@ const numIslands = (grid) => {
 };
 
 const checkIsland = (grid, i, j) => {
+    grid[i][j] = 0
     
+    if(i > 0 && grid[i-1][j] == 1) {
+        
+    }
+    if(i <= grid.length -2 && grid[i+1][j] == 1){
+        expand(grid, i+1, j)
+    }
     
     
 }
