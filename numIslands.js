@@ -20,6 +20,12 @@ const checkIsland = (grid, i, j) => {
     if(i <= grid.length -2 && grid[i+1][j] == 1){
         expand(grid, i+1, j)
     }
+    if(j> 0 && grid[i][j-1] == 1){
+        expand(grid, i, j-1)
+    }
+    if(j <= grid[0].length - 2 && grid[i][j+1] == 1){
+        expand(grid, i, j+1)
+    }
     
     
 }
