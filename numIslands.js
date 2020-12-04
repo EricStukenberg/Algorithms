@@ -10,3 +10,9 @@ const numIslands = (grid) => {
         }
     }
 };
+
+const checkIsland = (grid, i, j) => {
+    
+    
+    
+}
